@@ -23,12 +23,29 @@ a {
     outline: none;
 }
 
+li {
+    display: inline-block;
+}
+
+/* ======================header==================================================== */
+/* ========================header 공통========================================== */
+.mainLogo,
+.mainCategories,
+.serviceTabList li,
+.mainCategoryList li,
+.mainSearch {
+    display: inline-block;
+}
+
+
 #header {
     background-color: rgb(238, 238, 238);
     max-width: 1240px;
     margin: 0 auto;
 
 }
+
+
 
 /* 로고 & 로그인 메뉴 전체 */
 .headerTop {
@@ -53,7 +70,6 @@ a {
 
 /* 로고 */
 .mainLogo {
-    display: inline-block;
     background-image: url(../image/logo.png);
     background-position: left;
     width: 200px;
@@ -71,7 +87,6 @@ a {
 }
 
 .serviceTabList li {
-    display: inline-block;
     font-size: 12px;
 }
 
@@ -86,14 +101,12 @@ a {
 
 /* 카테고리탭 */
 .mainCategories {
-    display: inline-block;
     margin-left: 10px;
     /* margin-top: -10px; */
     white-space: nowrap;
 }
 
 .mainCategoryList li {
-    display: inline-block;
     font-size: 20px;
     margin: 0 10px;
 }
@@ -114,7 +127,6 @@ a {
 
 /* 검색창 */
 .mainSearch {
-    display: inline-block;
     width: 220px;
     height: 32px;
     background-color: white;
@@ -154,6 +166,14 @@ button {
     clear: both;
 }
 
+/* =================================container 공통======================================== */
+.searchSorter .sortFilter,
+.listSort,
+.btnSection {
+    text-align: center;
+}
+
+
 
 /* ################################### 왼쪽 네비게이션바 ################################### */
 
@@ -182,7 +202,6 @@ button {
 }
 
 .searchSorter dl dd ul li {
-    display: inline-block;
     margin-bottom: 4px;
     font-size: .9em;
     background-color: #f5f5f5;
@@ -194,7 +213,6 @@ button {
 }
 
 .searchSorter .sortFilter {
-    text-align: center;
     border: 1px solid #ededed;
 }
 
@@ -213,11 +231,6 @@ button {
     margin-top: 60px;
 }
 
-div[class="img"]>img,
-.btnMore,
-li {
-    display: inline-block;
-}
 
 .listInfo1 {
     padding: 25px 30px;
@@ -247,7 +260,6 @@ div[class="img"]>img {
 
 .listSort {
     margin-left: 200px;
-    text-align: right;
 }
 
 .btnMore {
@@ -260,7 +272,6 @@ div[class="img"]>img {
 }
 
 .btnSection {
-    text-align: center;
     width: 100%;
 
 }
@@ -282,7 +293,7 @@ div[class="img"]>img {
     margin-left: 1vw;
 }
 
-#footer .footer_cover{
+#footer .footer_cover {
     max-width: 1240px;
     margin: 0 auto;
 }
@@ -408,5 +419,3 @@ strong {
 .top_margin_6 {
     margin-top: 20px;
 }
-
-
