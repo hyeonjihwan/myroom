@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.floatingBar {
+    width: 70px;
+    height: 480px;
+    background-color: lightblue;
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.floating {
+    width: 100%;
+    height: 120px;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+}
+
+.floating a {
+    display: inline-block;
+    width: 60px;
+    font-size: 10px;
+    color: white;
+    text-decoration: none;
+    margin-top: 30px;
+}
+
+.floating p {
+    margin-top: 47px;
+}
+
+.floatingBar .cart a {
+    background: url(../image/naver_whale.png) no-repeat top/30px;
+}
+
+.floatingBar .myPage a {
+    background: url(../image/naver_whale.png) no-repeat top/30px;
+}
+
+.floatingBar .share a {
+    background: url(../image/naver_whale.png) no-repeat top/30px;
+}
+
+.floatingBar .top a {
+    background: url(../image/naver_whale.png) no-repeat top/30px;
+}
