@@ -23,6 +23,12 @@ a {
     outline: none;
 }
 
+li,
+dt,
+dl {
+    display: inline-block;
+}
+
 #header,
 #container,
 #footer .footer_cover {
@@ -30,6 +36,17 @@ a {
     margin: 0 auto;
 
 }
+
+/* =============================header ======================================== */
+/* =======================================header 공통================================ */
+.mainLogo,
+.mainCategories,
+.serviceTabList li,
+.mainCategoryList li,
+.mainSearch {
+    display: inline-block;
+}
+
 
 #header {
     background-color: rgb(238, 238, 238);
@@ -59,7 +76,6 @@ a {
 
 /* 로고 */
 .mainLogo {
-    display: inline-block;
     background-image: url(../image/logo.png);
     background-position: left;
     width: 200px;
@@ -77,7 +93,6 @@ a {
 }
 
 .serviceTabList li {
-    display: inline-block;
     font-size: 12px;
 }
 
@@ -92,14 +107,12 @@ a {
 
 /* 카테고리탭 */
 .mainCategories {
-    display: inline-block;
     margin-left: 10px;
     /* margin-top: -10px; */
     white-space: nowrap;
 }
 
 .mainCategoryList li {
-    display: inline-block;
     font-size: 20px;
     margin: 0 10px;
 }
@@ -150,11 +163,198 @@ button {
 }
 
 /* ####################################/////main/////############################################## */
-.location{
-    text-align: right;
-    margin: 20px;
+/* ////////////////////////////////////////////// main 공통/////////////////////////////////////////////////////// */
+
+.order_tit ul,
+.order_tit {
+    display: inline-block;
 }
 
+/*/////////////////////////////////////////////////// 장바구니 상단/////////////////////////////////////////////////*/
+
+.location {
+    text-align: right;
+    margin: 20px 15px;
+}
+
+.location span {
+    font-size: 8px;
+    font-weight: lighter;
+}
+
+.order_tit {
+    line-height: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    position: relative;
+}
+
+.tri_arrow {
+    width: 10px;
+    margin: 0 10px;
+}
+
+.order_tit ul {
+    position: absolute;
+    right: 0;
+}
+
+.sub_contents {
+    margin: 0 15px 20px 15px;
+}
+
+.order_tit span {
+    font-weight: bold;
+    font: 28px 'jua';
+}
+
+hr {
+    border: solid 0.3px rgb(166, 166, 166);
+    background: rgb(166, 166, 166);
+    height: 4px;
+    margin-bottom: 20px;
+    border-radius: 10%/10%;
+}
+/* //////////////////////////////////////////////////////장바구니 메인///////////////////////////////////////////////// */
+
+/* ===================================================구매 리스트 (표)======================================================== */
+table {
+    border-collapse: collapse;
+    border-right: hidden;
+    border-left: hidden;
+    width: 95%;
+    margin: 10px auto;
+}
+
+tr,
+td {
+    border: .5px solid rgba(166, 166, 166, 0.7);
+}
+
+
+td {
+    line-height: 60px;
+}
+
+
+th {
+    border-collapse: collapse;
+    border-bottom: 2px solid rgba(166, 166, 166, 0.7);
+    text-align: center;
+    line-height: 30px;
+}
+
+/*===================================================== 상품 옵션 정보 td(이미지)================================ */
+
+tbody:not(tbody:nth-of-type(2)) {
+    text-align: center;
+}
+
+tbody td:nth-of-type(2) img {
+    /* display: inline-block; */
+    width: 20px;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+tbody td:nth-of-type(2) {
+    vertical-align: middle;
+}
+
+
+
+/* =======================================================수량 카운트 버튼 td======================================================= */
+
+
+.count_Pdt span {
+    position: relative;
+    vertical-align: middle;
+}
+
+.td_count_Pdt {
+    line-height: 100%;
+}
+
+.text_count {
+    border: 1px solid;
+    width: 30px;
+    text-align: right;
+}
+
+/* ======================================================구매 리스트(표) 밑 쇼핑 계속하기 버튼=============================== */
+
+.btn_Cart_Under em {
+    font-style: inherit;
+    border-bottom: 1px solid;
+    padding-bottom: 3px;
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+/* ///////////////////////////////////////////////////제품 가격 표시////////////////////////////////////////////////////////// */
+/* ====================================================전체 공통================================================================== */
+.price_sum{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+/* ========================================================구매 목록 별 설정============================================ */
+.price_sum_list{
+    margin-right: 30px;
+}
+.price_sum_list dl{
+    text-align: center;
+    margin: 0 20px;
+    vertical-align: middle;
+    font-size: 18px;
+}
+
+.price_sum_list span{
+    vertical-align: middle;
+}
+
+/* ////////////////////////////////////////////////구매하기 버튼/////////////////////////////////////////////// */
+/* ===================================================전체 공통================================================ */
+.order_box{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    line-height: 75px;
+}
+
+.left_order_box,.right_order_box{
+    vertical-align: middle;
+}
+
+/* ===============================================왼쪽 찜하기 버튼==================================================== */
+.left_order_box button{
+    border: solid 0.5px;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-left: 10px;
+}
+
+/* ==================================================오른쪽 주문 버튼============================================= */
+
+.right_order_box button{
+    border: solid 0.5px;
+    padding: 5px;
+    box-sizing: border-box;
+    margin: 0 5px;
+    font-size: 18px;
+    box-sizing: border-box;
+    width: 190px;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+.right_order_box button:nth-of-type(2){
+    background: blue;
+    color: white;
+    border: solid 0.5px blue;
+    margin-right: 30px;
+}
 /* ####################################/////footer/////############################################## */
 
 #footer {
@@ -175,24 +375,23 @@ button {
     margin-top: 70px;
 }
 
-span,
-strong {
+/* span, */
+strong,
+.CustomerService,
+.FamilySite,
+.sns_src>li {
     display: inline-block;
-    font-weight: bold;
 }
 
-strong {
+.foot_margin_top1 strong {
+    font-weight: bold;
     margin-left: 18px;
     color: rgb(44, 44, 173);
     font-size: 30px;
 }
 
-.CustomerService {
-    display: inline-block;
-}
 
 .FamilySite {
-    display: inline-block;
     /* 오른쪽 고정 */
     position: relative;
     left: 885px;
@@ -232,10 +431,6 @@ strong {
 
 .sns_src>li:nth-of-type(n+2) {
     margin-left: 25px;
-}
-
-.sns_src>li {
-    display: inline-block;
 }
 
 .sns_src>li>a {

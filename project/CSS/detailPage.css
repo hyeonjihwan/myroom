@@ -39,248 +39,96 @@ li {
 /* ========================header 공통========================================== */
 .mainLogo,
 .mainCategories,
-.serviceTabList li,
 .mainCategoryList li,
-.mainSearch {
+.mainSearch,
+.Search_bar,
+.mainLogin {
     display: inline-block;
 }
 
 
 #header {
     background-color: rgb(238, 238, 238);
+    position: sticky;
+    display: block;
+    margin: 0 auto;
+    z-index: 999;
+    top: 0;
 
 }
 
-
-
-/* 로고 & 로그인 메뉴 전체 */
-.headerTop {
-    line-height: 70px;
-    white-space: nowrap;
-    display: flex;
-    justify-content: space-between;
+.mainCategoryList {
+    text-align: center;
 }
 
-/* 카테고리 & 검색창 전체 */
-.headerBottom {
-    height: 100px;
-    white-space: nowrap;
-}
+
 
 .headerMenu {
-    height: 50px;
-    padding-top: 50px;
+    line-height: 30px;
+    padding: 30px 0;
     display: flex;
     justify-content: space-between;
 }
 
 /* 로고 */
 .mainLogo {
-    background-image: url(../image/logo.png);
-    background-position: left;
-    width: 200px;
+    background: url(../image/starbucks.jpg) 0/cover no-repeat;
+    width: 150px;
     text-indent: -9999em;
-}
-
-/* 로그인탭 */
-.serviceTab {
-    margin-top: 10px;
-    line-height: 3em;
-}
-
-.serviceTabList {
-    white-space: nowrap;
-}
-
-.serviceTabList li {
-    font-size: 12px;
-}
-
-.serviceTabList li a {
-    color: grey;
-}
-
-.serviceTabList li+li::before {
-    content: " | ";
-    color: lightsteelblue;
-}
-
-/* 카테고리탭 */
-.mainCategories {
-    margin-left: 10px;
-    /* margin-top: -10px; */
-    white-space: nowrap;
-}
-
-.mainCategoryList li {
-    font-size: 20px;
-    margin: 0 10px;
-}
-
-.mainCategoryList li a {
-    color: grey;
-}
-
-.categoryIcon {
-    background: url(../image/noun-menu-928567.png) left/60px no-repeat;
-}
-
-.categoryIcon span {
-    margin-left: 60px;
-    margin-right: 40px;
-    font-size: 24px;
-}
-
-/* 검색창 */
-.mainSearch {
-    width: 220px;
-    height: 32px;
-    background-color: white;
-    border-bottom: 1px solid;
-}
-
-input {
-    border: none;
-    background: white;
-    margin-left: 10px;
-}
-
-button img {
-    height: 20px;
-    vertical-align: middle;
-    margin: 5px;
-}
-
-button {
-    border: none;
-    background: none;
-}
-
-.mainSearch,
-.serviceTab {
-    margin-right: 30px;
-}
-
-/* ############################### container전체 ############################ */
-
-#container {
-    display: flex;
-    padding: 0 40px 100px 40px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    clear: both;
-}
-
-/* =================================container 공통======================================== */
-.searchSorter .sortFilter,
-
-.btnSection {
+    /* background-color: black; */
     text-align: center;
 }
 
-
-
-/* ################################### 왼쪽 네비게이션바 ################################### */
-
-#search {
-    width: 240px;
-    /* border: 1px solid; */
+.ServiceLogin {
+    display: flex;
 }
 
-.search_tit {
-    margin-left: 0;
-    font-size: 1.8em;
+.mainLogin {
+    position: relative;
+    left: 8%;
+    /* float: right; */
 }
 
-.pageTit {
-    padding: 90px 0 30px 0;
+.mainLogin a {
+
+    vertical-align: middle;
 }
 
-.search_list.cate_list .cate_list_item {
-    padding: 10px 0;
-    font-size: 1.15em;
+.mainCategoryList li:not(.mainCategoryList li:nth-of-type(1)) {
+    margin: 0 30px;
 }
 
-.searchSorter dl dt {
-    font-size: 1.1em;
-    margin-bottom: 10px;
+.mainCategoryList:nth-child(5) {
+    vertical-align: middle;
 }
 
-.searchSorter dl dd ul li {
-    margin-bottom: 4px;
-    font-size: .9em;
-    background-color: #f5f5f5;
-}
-
-.sortList {
-    margin: 0;
-    padding: 0;
-}
-
-.searchSorter .sortFilter {
-    border: 1px solid #ededed;
-}
-
-.searchSorter .sortFilter a {
-    display: block;
-    padding: 10px 0;
-}
-
-/* ################################### 메인콘텐트 ################################### */
-#contents {
-    flex: 1;
-    margin-left: 20px;
-}
-
-#productList {
-    margin-top: 60px;
-}
-
-
-.listInfo1 {
-    padding: 25px 30px;
-}
-
-
-.listLeng {
-    float: left;
-
-}
-
-.listStyle1 .list>li {
-    width: 32%;
-}
-
-div[class="img"]>img {
-    width: 100%;
-
-}
-
-.tit>p,
-.price {
-    /* float: left; */
-    padding: 10px;
-    margin-left: 10px;
-}
-
-.listSort {
-    margin-right: 50px;
-    text-align: right;
-}
-
-.btnMore {
-    min-width: 146px;
-    line-height: 46px;
-    color: black;
-    background-color: white;
-    box-sizing: border-box;
+.Search_bar {
+    width: 300px;
+    line-height: 20px;
     border: solid 1px;
+    border-radius: 3%/10%;
+    vertical-align: middle;
+    margin-left: 20px;
+    opacity: 0.7;
+    background-color: rgb(250, 250, 250);
 }
 
-.btnSection {
-    width: 100%;
-
+.Search_bar img {
+    width: 25px;
+    float: left;
+    margin: 2px;
+    opacity: 0.4;
 }
+
+.mainLogin img {
+    width: 30px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+
+/* ############################### container전체 ############################ */
+
 
 
 /* ####################################/////footer/////############################################## */
