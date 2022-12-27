@@ -39,23 +39,30 @@ dl {
 
 /* =============================header ======================================== */
 /* =======================================header 공통================================ */
-.mainLogo,
-.mainCategories,
-.serviceTabList li,
-.mainCategoryList li,
-.mainSearch {
-    display: inline-block;
+* {
+    margin: 0;
+    padding: 0;
 }
 
+a {
+    text-decoration: none;
+}
 
-#header {
-    background-color: rgb(238, 238, 238);
+/* =========================header============================ */
 
+header {
+    background-color: lightsteelblue;
+}
+
+.headerTopWide {
+    background-color: white;
 }
 
 /* 로고 & 로그인 메뉴 전체 */
 .headerTop {
-    line-height: 70px;
+    width: 1240px;
+    height: 60px;
+    margin: auto;
     white-space: nowrap;
     display: flex;
     justify-content: space-between;
@@ -63,21 +70,26 @@ dl {
 
 /* 카테고리 & 검색창 전체 */
 .headerBottom {
-    height: 100px;
+    width: 1240px;
+    height: 110px;
+    margin: auto;
     white-space: nowrap;
+    position: relative;
+    background-color: lightsteelblue;
 }
 
 .headerMenu {
-    height: 50px;
-    padding-top: 50px;
+    width: 100%;
+    line-height: 50px;
+    position: absolute;
+    bottom: 0;
     display: flex;
     justify-content: space-between;
 }
 
 /* 로고 */
 .mainLogo {
-    background-image: url(../image/logo.png);
-    background-position: left;
+    display: inline-block;
     width: 200px;
     text-indent: -9999em;
 }
@@ -93,6 +105,7 @@ dl {
 }
 
 .serviceTabList li {
+    display: inline-block;
     font-size: 12px;
 }
 
@@ -108,17 +121,23 @@ dl {
 /* 카테고리탭 */
 .mainCategories {
     margin-left: 10px;
-    /* margin-top: -10px; */
     white-space: nowrap;
 }
 
 .mainCategoryList li {
-    font-size: 20px;
+    display: inline-block;
+    font-size: 18px;
     margin: 0 10px;
 }
 
 .mainCategoryList li a {
-    color: grey;
+    color: white;
+}
+
+.categoryHover {
+    width: 190px;
+    background-color: white;
+    border-radius: 10px 10px 0 0;
 }
 
 .categoryIcon {
@@ -126,33 +145,35 @@ dl {
 }
 
 .categoryIcon span {
+    color: lightslategrey;
     margin-left: 60px;
     margin-right: 40px;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 /* 검색창 */
 .mainSearch {
-    display: inline-block;
     width: 220px;
-    height: 32px;
+    height: 35px;
+    line-height: 35px;
     background-color: white;
     border-bottom: 1px solid;
+    margin-top: 10px;
 }
 
-input {
+.mainSearch input {
     border: none;
     background: white;
     margin-left: 10px;
 }
 
-button img {
+.mainSearch button img {
     height: 20px;
     vertical-align: middle;
-    margin: 5px;
 }
 
-button {
+.mainSearch button,
+.searchPageBar button {
     border: none;
     background: none;
 }
@@ -160,6 +181,35 @@ button {
 .mainSearch,
 .serviceTab {
     margin-right: 30px;
+}
+
+/* 카테고리1 hover */
+.categoryHover ul {
+    box-sizing: border-box;
+    width: 190px;
+    padding: 10px;
+    border: 1px solid lightgray;
+    background-color: white;
+    position: absolute;
+    visibility: hidden;
+    z-index: 999;
+}
+
+.categoryHover li {
+    font-size: 16px;
+    display: block;
+}
+
+.categoryHover:hover {
+    background-color: lightslategray;
+}
+
+.categoryHover:hover span {
+    color: white;
+}
+
+.categoryHover:hover ul {
+    visibility: visible;
 }
 
 /* ####################################/////main/////############################################## */
