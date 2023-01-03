@@ -1,0 +1,482 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    margin: 0 auto;
+    color: #333;
+    word-wrap: break-word;
+    word-break: keep-all;
+}
+
+.headerTop,
+.headerMenu,
+#login_wrap,
+#footer .footer_cover {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* div {
+    border: 1px solid;
+} */
+
+a {
+    color: #222;
+    text-decoration: none;
+    outline: none;
+}
+
+/* ================================================================ login ================================================================ */
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+.hide {
+    display: inline-block;
+    text-indent: -5000px;
+}
+
+.find {
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+}
+
+.find2 {
+    font-size: 14px;
+    color: black;
+}
+
+/* #################################################################### */
+main {
+    height: 100vh;
+    /* border: 1px solid; */
+    text-align: center;
+}
+
+#login_wrap {
+    height: 100%;
+}
+
+#login_container {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, -60%);
+
+    /* border: 1px solid; */
+    height: 600px;
+    width: 1000px;
+    /* background-color: antiquewhite; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_form {
+    padding: 50px 70px 50px 50px;
+    border-right: 2px solid #ccc;
+    /* border: 1px solid; */
+}
+
+/* ======== 메인로그인 ========= */
+.login_tit img {
+    width: 150px;
+}
+
+.login_input {
+    width: 450px;
+    height: 50px;
+    box-sizing: border-box;
+    font-size: 18px;
+    padding: 16px;
+    border-radius: 5px;
+}
+
+.login_btn {
+    width: 450px;
+    height: 40px;
+    margin-top: 15px;
+
+    background-color: black;
+    color: white;
+
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.find_div {
+    margin: 20px 0 20px 0;
+}
+
+/* ========= sns로그인 ========== */
+.sns_login {
+    padding-left: 70px;
+    padding-bottom: 38px;
+}
+
+.sns_login_tit {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.sns_login_img {
+    width: 200px;
+    /* height: 45px; */
+}
+
+.sns_login_img2 {
+    width: 205px;
+    height: 50px;
+}
+
+.sns_login div:first-child {
+    padding-bottom: 40px;
+}
+
+.sns_login div:nth-of-type(n+2) {
+    padding: 10px 0 10px 0;
+}
+
+
+/* ========= 로그인광고 ========== */
+.ad_img {
+    width: 430px;
+    margin-bottom: 50px;
+}
+
+/* ====== 로그인 푸터 링크 ===== */
+.login_fotter_link li {
+    list-style: none;
+    display: inline-block;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* ============================================================== header ============================================================== */
+
+/* =========================header============================ */
+
+header {
+    /* height: 120px; */
+    margin-bottom: 50px;
+}
+
+.headertop_cover {
+    background-color: rgba(223, 223, 223, 0.4);
+}
+
+.headerTop {
+    height: 70px;
+    padding: 0 10px 0 10px;
+    display: grid;
+    grid-template: 20fr 1fr 1fr /1fr;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.header_cover {
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+    box-shadow: 1px 1px 2px lightgray;
+    /* height: 60px; */
+    padding: 0 10px 0 10px;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+/* ----------- 상단 헤더 ----------- */
+.mainLogo {
+    width: 150px;
+    text-indent: -9999em;
+    background: url(../image/crop_logo_black.png) no-repeat 0/100%;
+    margin-left: 15px;
+}
+
+/* 로그인탭 */
+.serviceTab {
+    line-height: 80px;
+    padding-right: 20px;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.serviceTabList {
+    white-space: nowrap;
+}
+
+.serviceTabList li {
+    display: inline-block;
+    font-size: 12px;
+}
+
+.serviceTabList li a {
+    color: grey;
+}
+
+.serviceTabList li+li::before {
+    content: " | ";
+    color: grey;
+}
+
+/* ----------- 하단 헤더 ----------- */
+.headerMenu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* 좌측 카테고리 */
+.mainCategoryList {
+    display: flex;
+}
+
+.mainCategoryList>li {
+    padding: 20px;
+}
+
+.mainCategoryList>li>a {
+    color: black;
+    font-weight: bold;
+}
+
+/* ============== 카테고리 세부 메뉴 ============== */
+.detailCategoryList1 {
+    visibility: hidden;
+
+    box-sizing: border-box;
+    width: 100%;
+    background-color: lavender;
+    padding: 10px;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.detailCategoryList1 li {
+    padding: 20px;
+}
+
+.bannerCategory:hover .detailCategoryList1,
+.detailCategoryList1:hover {
+    visibility: visible;
+}
+
+/* 우측 검색창 */
+.mainSearch {
+    box-sizing: border-box;
+    width: 250px;
+    height: 40px;
+    background-color: white;
+    padding: 0 10px 0 10px;
+}
+
+.mainSearch input {
+    box-sizing: border-box;
+    width: 90%;
+    border: none;
+}
+
+.mainSearch button {
+    width: 10%;
+    border: none;
+    background: none;
+}
+
+.mainSearch img {
+    height: 20px;
+    cursor: pointer;
+}
+
+.mainSearch {
+    height: 100%;
+    display: flex;
+    background-color: rgba(211, 211, 211, 0.4);
+    border-radius: 5px;
+}
+
+.mainSearch form {
+    display: flex;
+    align-items: center;
+}
+
+.mainSearch form input {
+    background: none;
+    height: 17px;
+    width: 210px;
+}
+
+/* ########################/////footer/////##################### */
+/* footer */
+
+#footer {
+    box-sizing: border-box;
+    background-color: rgb(233, 234, 234);
+    padding: 70px 30px 30px 30px;
+}
+
+#footer .footer_cover {
+    /* width: 1240px; */
+    margin: 0 auto;
+}
+
+.footer_cover li {
+    display: inline-block;
+}
+
+/* 고객센터, FamilySite ================================================== */
+/* .footer_cover span,
+.footer_cover strong {
+    display: inline-block;
+    font-weight: bold;
+} */
+
+.footer_cover strong {
+    margin-left: 18px;
+    color: rgb(44, 44, 173);
+    font-size: 30px;
+}
+
+.CustomerService {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+}
+
+.FamilySite {
+    /* 오른쪽 고정 */
+    position: absolute;
+    right: 0;
+}
+
+/* 수신자 부담전화=================================================== */
+/* 수신자 부담전화 위 */
+.foot_margin_top2 {
+    margin-top: 35px;
+}
+
+/* 왼쪽 margin number은 리스트 */
+.foot_list1>li+li,
+.foot_list1>li+li+li+li,
+.foot_list2>li+li,
+.foot_list2>li+li+li+li {
+    margin-left: 10px;
+}
+
+.foot_list1>li+li+li,
+.foot_list2>li+li+li {
+    margin-left: 50px;
+}
+
+.foot_list3 a {
+    color: initial;
+}
+
+/* 다른 사이트 "_blank"================================================== */
+/* sns_src 위 */
+.foot_margin_top3 {
+    width: 100%;
+    height: 10px;
+    position: relative;
+}
+
+.sns_src {
+    width: 225px;
+    height: 60px;
+
+    position: absolute;
+    right: 0;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.sns_src li a {
+    display: inline-block;
+    text-indent: -9999em;
+    width: 40px;
+    height: 40px;
+}
+
+.sns_src li:nth-of-type(1) a {
+    background: url(../image/instagram.svg) no-repeat center/cover;
+}
+
+.sns_src li:nth-of-type(2) a {
+    background: url(../image/youtube.svg) no-repeat center/cover;
+    width: 48px;
+}
+
+.sns_src li:nth-of-type(3) a {
+    background: url(../image/facebook.svg) no-repeat center/cover;
+}
+
+.sns_src li:nth-of-type(4) a {
+    background: url(../image/twitter.svg) no-repeat center/cover;
+}
+
+/* 로고 이미지 ================================================= */
+/* 이미지 위 */
+.foot_margin_top4 {
+    margin-top: 10px;
+}
+
+.foot_logo>img {
+    width: 130px;
+}
+
+/* 제휴(a 태그)=================================================== */
+/* 제휴위 */
+.foot_margin_top5 {
+    margin-top: 20px;
+}
+
+.foot_list3>li:nth-of-type(n+2),
+.foot_list4>li:nth-of-type(n+2) {
+    margin-left: 20px;
+}
+
+.top_margin_6 {
+    margin-top: 20px;
+}
+
+/* 애니메이션 */
+@media screen and (max-width:77.5em) {
+    .rightSide {
+        display: none;
+    }
+
+    .detailScriptPage {
+        width: auto;
+        text-align: center;
+    }
+
+    .leftSide {
+        width: 95%;
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width:54.25em) {
+    .leftSide {
+        width: initial;
+        font-size: initial;
+    }
+}
