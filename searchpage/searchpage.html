@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>검색 결과</title>
+    <title>검색결과 | Tipsy - 다양한 술이 있는 곳</title>
     <link rel="stylesheet" href="./CSS/searchpage.css">
 </head>
 
@@ -15,10 +15,12 @@
         <div class="headertop_cover">
 
             <div class="headerTop">
-                <div class="mainLogo">tipsy</div>
+                <a href="../introPage/introPage.html" class="mainLogo">tipsy</a>
                 <div class="serviceTab">
                     <ul class="serviceTabList">
                         <li><a href="../login/login.html">로그인</a></li>
+                        <li><a href="../join/join.html">회원가입</a></li>
+                        <li><a href="../shopBasket/shopBasket.html">장바구니</a></li>
                     </ul>
                 </div>
             </div>
@@ -28,12 +30,21 @@
                 <ul class="mainCategoryList">
                     <li class="bannerCategory">
                         <a href="#">카테고리
-                            <ul class="detailCategoryList1">
-                                <li>세부 카테고리 1</li>
-                                <li>세부 카테고리 2</li>
-                                <li>세부 카테고리 3</li>
-                                <li>세부 카테고리 4</li>
-                            </ul>
+                            <div class="detailCategoryList">
+                                <ul>
+                                    <li class="drinkhover">
+                                        <a href="../mainPage/mainPage_wine.html">주류</a>
+                                        <ul class="detailCategoryListof">
+                                            <li><a href="../mainPage/mainPage_wine.html">와인</a></li>
+                                            <li><a href="../mainPage/mainPage_soju.html">소주</a></li>
+                                            <li><a href="../mainPage/mainPage_makgeolli.html">막걸리, 탁주</a></li>
+                                            <li><a href="../mainPage/mainPage_cheongju.html">약주, 청주</a></li>
+                                            <li><a href="../mainPage/mainPage_fruit.html">과실주</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="../mainpage/mainPage_side.html">안주</a></li>
+                                </ul>
+                            </div>
                         </a>
                     </li>
                     <li><a href="#">매장찾기</a></li>
@@ -59,7 +70,7 @@
             <div id="contents">
                 <div class="searchPageMain">
                     <div class="searchPageBar">
-                        <form action="../CSS/searchpage.css">
+                        <form action="#">
                             <input type="search" name="SearchPageSearch" placeholder="검색">
                             <button type="submit">
                                 <img src="./image/noun-search-687065.png" alt="검색">
@@ -78,21 +89,21 @@
                                 </li>
                                 <li class="searchCategory tab2"><a href="#totalSearchList1">
                                         <p>
-                                            <span>제품</span><br>
+                                            <span>주류</span><br>
                                             0건
                                         </p>
                                     </a>
                                 </li>
                                 <li class="searchCategory tab3"><a href="#totalSearchList2">
                                         <p>
-                                            <span>우리집 자랑하기</span><br>
+                                            <span>안주</span><br>
                                             0건
                                         </p>
                                     </a>
                                 </li>
                                 <li class="searchCategory tab4"><a href="#totalSearchList3">
                                         <p>
-                                            <span>에몬스소식</span><br>
+                                            <span>공지사항</span><br>
                                             0건
                                         </p>
                                     </a>
@@ -108,21 +119,21 @@
                         </div>
                         <div class="totalSearchArea">
                             <div id="totalSearchList1">
-                                <p>제품(전체 0 건 / 0 건)</p>
+                                <p>주류(전체 0 건 / 0 건)</p>
                                 <div class="totalSearch List1">
                                     <p>검색 결과가 없습니다.</p>
                                 </div>
                                 <a href="#">제품 검색결과 더보기</a>
                             </div>
                             <div id="totalSearchList2">
-                                <p>우리집 자랑하기(전체 0 건 / 0 건)</p>
+                                <p>안주(전체 0 건 / 0 건)</p>
                                 <div class="totalSearch List2">
                                     <p>검색 결과가 없습니다.</p>
                                 </div>
                                 <a href="#">우리집 자랑하기 검색결과 더보기</a>
                             </div>
                             <div id="totalSearchList3">
-                                <p>에몬스 소식(전체 0 건 / 0 건)</p>
+                                <p>공지사항(전체 0 건 / 0 건)</p>
                                 <div class="totalSearch List3">
                                     <p>검색 결과가 없습니다.</p>
                                 </div>
@@ -243,6 +254,8 @@
             </div>
         </div>
     </div>
+    <a href="#" class="topfloatingbar"></a>
+
 </body>
 
 </html>

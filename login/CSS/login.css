@@ -2,6 +2,14 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    font-family: 'NEXON Lv2 Gothic';
+}
+
+@font-face {
+    font-family: 'NEXON Lv2 Gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
@@ -87,8 +95,13 @@ main {
 }
 
 /* ======== 메인로그인 ========= */
-.login_tit img {
-    width: 150px;
+.login_logo {
+    width: 100px;
+    height: 100px;
+    text-indent: -9999em;
+    background: url(../image/login_logo2.png) no-repeat center/100%;
+    margin-left: 15px;
+    display: inline-block;
 }
 
 .login_input {
@@ -164,10 +177,7 @@ main {
     opacity: 0.7;
 }
 
-/* ============================================================== header ============================================================== */
-
-/* =========================header============================ */
-
+/* ====================header 공통==================== */
 header {
     /* height: 120px; */
     margin-bottom: 50px;
@@ -257,25 +267,58 @@ header {
 }
 
 /* ============== 카테고리 세부 메뉴 ============== */
-.detailCategoryList1 {
+.detailCategoryList {
     visibility: hidden;
 
     box-sizing: border-box;
-    width: 100%;
-    background-color: lavender;
-    padding: 10px;
+    width: 35em;
+    font-weight: initial;
+    background-color: white;
+    padding: 20px 40px;
+    border: 1px solid lightgray;
+    /* border-top: none; */
+    box-shadow: 1px 1px 2px lightgray;
 
     position: absolute;
     top: 100%;
     left: 0;
 }
 
-.detailCategoryList1 li {
-    padding: 20px;
+.detailCategoryList>ul {
+    width: 12em;
+    height: 16.25em;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
-.bannerCategory:hover .detailCategoryList1,
-.detailCategoryList1:hover {
+.detailCategoryList li {
+    padding: 15px;
+}
+
+
+.detailCategoryList a {
+    display: block;
+}
+
+.detailCategoryListof {
+    visibility: hidden;
+    width: 12em;
+    border-left: 1px solid lightgray;
+    padding-left: 50px;
+
+    position: absolute;
+    top: 0;
+    left: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.bannerCategory:hover .detailCategoryList,
+.drinkhover:hover .detailCategoryListof,
+.detailCategoryListof:hover {
     visibility: visible;
 }
 
@@ -298,17 +341,18 @@ header {
     width: 10%;
     border: none;
     background: none;
+
+    cursor: pointer;
 }
 
 .mainSearch img {
     height: 20px;
-    cursor: pointer;
 }
 
 .mainSearch {
     height: 100%;
     display: flex;
-    background-color: rgba(211, 211, 211, 0.4);
+    background-color: #f7f7f7;
     border-radius: 5px;
 }
 
@@ -350,7 +394,7 @@ header {
 
 .footer_cover strong {
     margin-left: 18px;
-    color: rgb(44, 44, 173);
+    color: #084875b7;
     font-size: 30px;
 }
 

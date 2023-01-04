@@ -5,20 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ 게시판</title>
+    <title>FAQ게시판 | Tipsy - 다양한 술이 있는 곳</title>
 
-    <link rel="stylesheet" href="./faq.css">
+    <link rel="stylesheet" href="./CSS/faq.css">
 </head>
 
 <body>
-    <!-- ############################========== header ========################################## -->
+    <!-- ======================================================== header ================================================== -->
     <div class="headertop_cover">
 
         <div class="headerTop">
-            <div class="mainLogo">tipsy</div>
+            <a href="../introPage/introPage.html" class="mainLogo">tipsy</a>
             <div class="serviceTab">
                 <ul class="serviceTabList">
                     <li><a href="../login/login.html">로그인</a></li>
+                    <li><a href="../join/join.html">회원가입</a></li>
+                    <li><a href="../shopBasket/shopBasket.html">장바구니</a></li>
                 </ul>
             </div>
         </div>
@@ -28,12 +30,21 @@
             <ul class="mainCategoryList">
                 <li class="bannerCategory">
                     <a href="#">카테고리
-                        <ul class="detailCategoryList1">
-                            <li>세부 카테고리 1</li>
-                            <li>세부 카테고리 2</li>
-                            <li>세부 카테고리 3</li>
-                            <li>세부 카테고리 4</li>
-                        </ul>
+                        <div class="detailCategoryList">
+                            <ul>
+                                <li class="drinkhover">
+                                    <a href="../mainPage/mainPage_wine.html">주류</a>
+                                    <ul class="detailCategoryListof">
+                                        <li><a href="../mainPage/mainPage_wine.html">와인</a></li>
+                                        <li><a href="../mainPage/mainPage_soju.html">소주</a></li>
+                                        <li><a href="../mainPage/mainPage_makgeolli.html">막걸리, 탁주</a></li>
+                                        <li><a href="../mainPage/mainPage_cheongju.html">약주, 청주</a></li>
+                                        <li><a href="../mainPage/mainPage_fruit.html">과실주</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="../mainpage/mainPage_side.html">안주</a></li>
+                            </ul>
+                        </div>
                     </a>
                 </li>
                 <li><a href="#">매장찾기</a></li>
@@ -62,7 +73,7 @@
                     저희 도르리 사이트를 이용하시는 회원님들의 질문 중
                     자주하시는 질문들을 모아 놓았습니다.
                     <br>
-                    요청 사항 빛 문의 사항이 있으시면
+                    요청 사항 및 문의 사항이 있으시면
                     고객지원 > 간편문의를 이용해주세요~
                 </p>
             </div>
@@ -525,6 +536,8 @@
             </div>
         </div>
     </div>
+    <a href="#" class="topfloatingbar"></a>
+
 </body>
 
 </html>

@@ -4,6 +4,14 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    font-family: 'NEXON Lv2 Gothic';
+}
+
+@font-face {
+    font-family: 'NEXON Lv2 Gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
@@ -52,9 +60,9 @@ header {
     margin-bottom: 50px;
 }
 
-.headertop_cover {
+/* .headertop_cover {
     background-color: rgba(223, 223, 223, 0.4);
-}
+} */
 
 .headerTop {
     height: 70px;
@@ -136,25 +144,58 @@ header {
 }
 
 /* ============== 카테고리 세부 메뉴 ============== */
-.detailCategoryList1 {
+.detailCategoryList {
     visibility: hidden;
 
     box-sizing: border-box;
-    width: 100%;
-    background-color: lavender;
-    padding: 10px;
+    width: 35em;
+    font-weight: initial;
+    background-color: white;
+    padding: 20px 40px;
+    border: 1px solid lightgray;
+    /* border-top: none; */
+    box-shadow: 1px 1px 2px lightgray;
 
     position: absolute;
     top: 100%;
     left: 0;
 }
 
-.detailCategoryList1 li {
-    padding: 20px;
+.detailCategoryList>ul {
+    width: 12em;
+    height: 16.25em;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
-.bannerCategory:hover .detailCategoryList1,
-.detailCategoryList1:hover {
+.detailCategoryList li {
+    padding: 15px;
+}
+
+
+.detailCategoryList a {
+    display: block;
+}
+
+.detailCategoryListof {
+    visibility: hidden;
+    width: 12em;
+    border-left: 1px solid lightgray;
+    padding-left: 50px;
+
+    position: absolute;
+    top: 0;
+    left: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.bannerCategory:hover .detailCategoryList,
+.drinkhover:hover .detailCategoryListof,
+.detailCategoryListof:hover {
     visibility: visible;
 }
 
@@ -177,6 +218,8 @@ header {
     width: 10%;
     border: none;
     background: none;
+
+    cursor: pointer;
 }
 
 .mainSearch img {
@@ -186,7 +229,7 @@ header {
 .mainSearch {
     height: 100%;
     display: flex;
-    background-color: rgba(211, 211, 211, 0.4);
+    background-color: #f7f7f7;
     border-radius: 5px;
 }
 
@@ -274,9 +317,13 @@ td {
     border: .5px solid rgba(166, 166, 166, 0.7);
 }
 
+.cart_count_list tbody td {
+    border-right: hidden;
+    /* 체크박스 오른쪽 옆 테두리 제거 */
+}
 
 td {
-    line-height: 60px;
+    line-height: 50px;
 }
 
 
@@ -295,9 +342,11 @@ tbody:not(tbody:nth-of-type(2)) {
 
 tbody td:nth-of-type(2) img {
     /* display: inline-block; */
-    width: 20px;
+    width: 80px;
     vertical-align: middle;
     padding: 10px;
+    margin-right: 20px;
+    border-radius: 20px;
 }
 
 tbody td:nth-of-type(2) {
@@ -332,6 +381,7 @@ tbody td:nth-of-type(2) {
     padding-bottom: 3px;
     font-weight: lighter;
     font-size: 14px;
+    margin-left: 30px;
 }
 
 /* ///////////////////////////////////////////////////제품 가격 표시////////////////////////////////////////////////////////// */
@@ -363,7 +413,7 @@ tbody td:nth-of-type(2) {
 .order_box {
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
+    padding: 20px 20px 0 30px;
     line-height: 75px;
 }
 
@@ -374,16 +424,19 @@ tbody td:nth-of-type(2) {
 
 /* ===============================================왼쪽 찜하기 버튼==================================================== */
 .left_order_box button {
-    border: solid 0.5px;
+    border: solid 1px #efefef;
+    background-color: #efefef;
     padding: 5px;
     box-sizing: border-box;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 /* ==================================================오른쪽 주문 버튼============================================= */
 
 .right_order_box button {
-    border: solid 0.5px;
+    border: solid 1px #efefef;
+    background-color: #efefef;
     padding: 5px;
     box-sizing: border-box;
     margin: 0 5px;
@@ -392,12 +445,13 @@ tbody td:nth-of-type(2) {
     width: 190px;
     line-height: 40px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .right_order_box button:nth-of-type(2) {
-    background: blue;
+    background-color: #084875b7;
     color: white;
-    border: solid 0.5px blue;
+    border: solid 0.5px #084875b7;
     margin-right: 30px;
 }
 
@@ -449,6 +503,7 @@ tbody td:nth-of-type(2) {
 
 .product_main tr:nth-of-type(1) div:nth-of-type(2) {
     margin: 10px 0 0 30px;
+    flex-basis: calc(100%/6);
 }
 
 .product_main th {
@@ -488,7 +543,7 @@ tbody td:nth-of-type(2) {
 
 .footer_cover strong {
     margin-left: 18px;
-    color: rgb(44, 44, 173);
+    color: #084875b7;
     font-size: 30px;
 }
 

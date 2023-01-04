@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>마이페이지</title>
+    <title>마이페이지 | Tipsy - 다양한 술이 있는 곳</title>
     <link rel="stylesheet" href="./CSS/mypage.css">
 </head>
 
@@ -14,10 +14,12 @@
     <div class="headertop_cover">
 
         <div class="headerTop">
-            <div class="mainLogo">tipsy</div>
+            <a href="../introPage/introPage.html" class="mainLogo">tipsy</a>
             <div class="serviceTab">
                 <ul class="serviceTabList">
                     <li><a href="../login/login.html">로그인</a></li>
+                    <li><a href="../join/join.html">회원가입</a></li>
+                    <li><a href="../shopBasket/shopBasket.html">장바구니</a></li>
                 </ul>
             </div>
         </div>
@@ -27,12 +29,21 @@
             <ul class="mainCategoryList">
                 <li class="bannerCategory">
                     <a href="#">카테고리
-                        <ul class="detailCategoryList1">
-                            <li>세부 카테고리 1</li>
-                            <li>세부 카테고리 2</li>
-                            <li>세부 카테고리 3</li>
-                            <li>세부 카테고리 4</li>
-                        </ul>
+                        <div class="detailCategoryList">
+                            <ul>
+                                <li class="drinkhover">
+                                    <a href="../mainPage/mainPage_wine.html">주류</a>
+                                    <ul class="detailCategoryListof">
+                                        <li><a href="../mainPage/mainPage_wine.html">와인</a></li>
+                                        <li><a href="../mainPage/mainPage_soju.html">소주</a></li>
+                                        <li><a href="../mainPage/mainPage_makgeolli.html">막걸리, 탁주</a></li>
+                                        <li><a href="../mainPage/mainPage_cheongju.html">약주, 청주</a></li>
+                                        <li><a href="../mainPage/mainPage_fruit.html">과실주</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="../mainpage/mainPage_side.html">안주</a></li>
+                            </ul>
+                        </div>
                     </a>
                 </li>
                 <li><a href="#">매장찾기</a></li>
@@ -50,7 +61,6 @@
             </div>
         </div>
     </div>
-
     <!-- ============================ 마이페이지 =================================== -->
     <main>
         <div id="container">
@@ -59,10 +69,10 @@
                 <div class="myPageBox">
                     <div class="profileBox">
                         <div class="profile part1">
-                            <div>배수지님</div>
+                            <div>회원 님</div>
                             <div>
-                                <div>개인정보 수정</div>
-                                <div>뭐가 있냐</div>
+                                <a href="#">배송지 목록</a>
+                                <a href="#">개인정보 수정</a>
                             </div>
                         </div>
                         <div class="profile part2">
@@ -238,6 +248,8 @@
             </div>
         </div>
     </div>
+    <a href="#" class="topfloatingbar"></a>
+
 </body>
 
 </html>
